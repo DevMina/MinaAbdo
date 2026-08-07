@@ -1,412 +1,875 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Abdo - Software Engineering Specialist</title>
-    <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="css/timeline.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mina Abdo — Software Engineering Specialist with 10 years of experience in .NET, Angular, SQL, Umbraco, and SiteCore.">
+  <meta property="og:title" content="Mina Abdo — Software Engineering Specialist">
+  <meta property="og:description" content="10 years building enterprise-scale applications for SSA, FAB, GACA, and more.">
+  <meta property="og:type" content="website">
+  <title>Mina Abdo — Software Engineering Specialist</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <!-- topBtn -->
-    <button onclick="topFunction()" id="topBtn" class="top-arrow">▲</button>
-    <!-- navbar Section -->
-    <div class="navbar">
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="menu" id="menu">
-            <a href="#home">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#home">Mina<span>.</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <i class="fa fa-bars"></i>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#personal">Personal</a></li>
+    <li><a href="#certificates">Learning</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <i class="fa fa-circle" style="font-size:0.5rem; color:#4ade80;"></i>
+      Available for new opportunities · Open to relocation
     </div>
-    <!-- <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Mina Abdo Hakim</h1>
-        <p>Software Engineering Specialist with 8+ years of experience in various technologies and frameworks.</p>
-        <a href="#projects">View My Work</a>
-    </section>
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate software engineering specialist with over 8 years of experience in building high-quality
-            applications. My expertise lies in front-end and back-end development, with a strong focus on creating
-            efficient and scalable solutions. I enjoy tackling complex problems and I am constantly seeking to improve
-            my skills and knowledge in the ever-evolving tech industry.</p>
-        <a href="files/MinaAbdo-CV.pdf" download>Download Resume</a>
-    </section>
-    <!-- Digital Skills Section -->
-    <section id="skills">
-        <h2>Digital Skills</h2>
-        <ul>
-            <li>ASP.NET (Web-forms, MVC)</li>
-            <li>C#</li>
-            <li>.NetCore</li>
-            <li>SQL Server</li>
-            <li>Angular</li>
-            <li>TypeScript</li>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>Xamarin Forms</li>
-            <li>CMS (Umbraco, SiteCore)</li>
-            <li>SharePoint</li>
-            <li>SignalR</li>
-            <li>SOLID Design Principles</li>
-            <li>Design Patterns</li>
-        </ul>
-    </section>
-    <!-- Soft Skills Section -->
-    <section id="skills">
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Problem-Solving</li>
-            <li>Communication</li>
-            <li>Team Player</li>
-            <li>Atention to Details</li>
-            <li>Time Management</li>
-            <li>Creativity</li>
-            <li>Analytical Mindset</li>
-            <li>Responsibility and Accountability</li>
-            <li>Self-Motivation</li>
-            <li>Flexibility and Adaptability</li>
-        </ul>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <!-- <div class="timeline">
-            <div class="timelinecontainer left">
-              <div class="content">
-                <h2>2017</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-            <div class="timelinecontainer right">
-              <div class="content">
-                <h2>2016</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-            <div class="timelinecontainer left">
-              <div class="content">
-                <h2>2015</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-            <div class="timelinecontainer right">
-              <div class="content">
-                <h2>2012</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-            <div class="timelinecontainer left">
-              <div class="content">
-                <h2>2011</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-            <div class="timelinecontainer right">
-              <div class="content">
-                <h2>2007</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-              </div>
-            </div>
-          </div> -->
-        <div class="container">
-            <div class="card">
-                <h3>Software Engineering Specialist</h3>
-                <p>Link Development</p>
-                <p>January 2024 – Present</p>
-                <p style="text-align: start;"> Engaging in revamping the website of the SSA (Saudi Space Agency) and
-                    supporting client requests and apply it on the website.</p>
-            </div>
-            <div class="card">
-                <h3>Senior Software Engineer</h3>
-                <p>Link Development</p>
-                <p>January 2021 - January 2024</p>
-                <p style="text-align: start;">Engaged in revamping the website of the SSA (Saudi Space Agency) and
-                    revamping the website of Faisal
-                    Islamic Bank of Egypt.</p>
-            </div>
-            <div class="card">
-                <h3>Software Engineer</h3>
-                <p>Link Development</p>
-                <p>February 2019 – January 2021 </p>
-                <p style="text-align: start;">Implemented new features, Implemented Admin panel and Enhanced lookup
-                    services for the General Authority for Investment & Free Zones (GAFI) system.</p>
-            </div>
-            <div class="card">
-                <h3>Software Development Supervisor</h3>
-                <p>HITS Solutions</p>
-                <p>January 2017 – January 2019</p>
-                <p style="text-align: start;">Contributed to the development of the Hits HR and Payroll system website,
-                    Hits HR and Payroll System mobile application, surveillance system, and tracking system.</p>
-            </div>
-            <div class="card">
-                <h3>Junior Software Engineer</h3>
-                <p>HITS Solutions</p>
-                <p>March 2016 – January 2017</p>
-                <p style="text-align: start;">
-                    Innovated new functionalities using ASP.NET and SQL, contributing to the Hits HR and Payroll
-                    System's development.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="images/Home/ssa.png" alt="SSA" class="project-image">
-            <div class="project-details">
-                <h3>Saudi Space Agency (SSA)</h3>
-                <p>
-                    The Saudi Space Agency's website is a dynamic portal showcasing the Kingdom's advancements and
-                    initiatives in space exploration and technology. The site offers detailed information about the
-                    agency's mission, vision, and strategic goals aimed at enhancing Saudi Arabia's presence in the
-                    global space industry.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> Umbraco CMS, HTML, CSS, JavaScript, Angular, C#, SQL Server DB
-                    </li>
-                    <li><strong>Role:</strong> Software Engineering Specialist</li>
-                    <li><strong>Duration:</strong> 10 months</li>
-                </ul>
-                <a href="https://ssa.gov.sa/" target="_blank">Live Project</a>
-                <!-- <a href="project-details/SSA.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/Home/fib.png" alt="FIBE" class="project-image">
-            <div class="project-details">
-                <h3>Faisal Islamic Bank of Egypt (FIBE)</h3>
-                <p>
-                    Faisal Islamic Bank of Egypt's website is a comprehensive online platform providing extensive
-                    information and services related to Islamic banking and finance. The site features an overview of
-                    the bank's history, mission, and values, emphasizing its commitment to Sharia-compliant banking
-                    practices. Users can access details about various personal and business banking products, including
-                    accounts, investments, financing, and e-banking services. The website also offers insights into the
-                    bank's social responsibility initiatives, financial reports, and latest news updates. Additionally,
-                    it provides customer support through various channels, ensuring a user-friendly and informative
-                    experience for visitors.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> SiteCore CMS, HTML, CSS, JavaScript, MVC, C#, SQL Server DB
-                    </li>
-                    <li><strong>Role:</strong> Senior Software Engineer</li>
-                    <li><strong>Duration:</strong> 12 months</li>
-                </ul>
-                <a href="https://www.faisalbank.com.eg/" target="_blank">Live Project</a>
-                <!-- <a href="project-details/FIBE.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/Home/gafi.png" alt="GAFI" class="project-image">
-            <div class="project-details">
-                <h3>The General Authority for Investment and Free Zones (GAFI)</h3>
-                <p>
-                    The General Authority for Investment and Free Zones (GAFI) website serves as an essential resource
-                    for investors and businesses interested in opportunities within Egypt. The site provides
-                    comprehensive information about the investment climate, regulatory framework, and incentives
-                    available in the country. Visitors can explore various sectors, investment zones, and services
-                    offered by GAFI, including facilitation of business registration and support for foreign investors.
-                    The website also features news updates, publications, and guides to assist investors in making
-                    informed decisions. With its user-friendly interface and extensive content, the GAFI website is a
-                    valuable tool for navigating the investment landscape in Egypt.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> SharePoint, HTML, CSS, JavaScript, AngularJS, MVC, C#, SQL Server DB
-                    </li>
-                    <li><strong>Role:</strong> Software Engineer / Senior Software Engineer</li>
-                    <li><strong>Duration:</strong> 30 months</li>
-                </ul>
-                <a href="https://www.gafi.gov.eg/" target="_blank">Live Project</a>
-                <!-- <a href="project-details/GAFI.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/Home/hitsmobile.png" alt="HITS Mobile App" class="project-image">
-            <div class="project-details">
-                <h3>HITS HR & Payroll Management System Mobile App</h3>
-                <p>
-                    The HITS HR & Payroll Management System Mobile App is a powerful and user-friendly tool designed to
-                    streamline HR and payroll processes for businesses. This app enables employees and managers to
-                    access essential HR functions on-the-go, including viewing payslips, managing leave requests,
-                    tracking attendance, and updating personal information. With real-time notifications and secure
-                    access, the app ensures timely and efficient communication between employees and HR departments. The
-                    intuitive interface and robust features of the HITS Solutions HR & Payroll mobile app make it an
-                    indispensable resource for enhancing productivity, improving employee engagement, and ensuring
-                    accurate payroll management, all from the convenience of a mobile device.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> Xamarin Forms
-                    </li>
-                    <li><strong>Role:</strong> Software Development Supervisor</li>
-                    <li><strong>Duration:</strong> 6 months</li>
-                </ul>
-                <a href="https://play.google.com/store/apps/details?id=com.hitssolutions.hitseasygo&hl=en&pli=1"
-                    target="_blank">Live Project</a>
-                <!-- <a href="project-details/HitsMobile.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/Home/hits.png" alt="HITS" class="project-image">
-            <div class="project-details">
-                <h3>HITS HR & Payroll Management System</h3>
-                <p>
-                    The HITS HR & Payroll Management System website is a robust platform dedicated to providing
-                    innovative HR solutions to businesses of all sizes. The site offers detailed information about their
-                    suite of HCM products, including payroll management, talent acquisition, performance management, and
-                    employee self-service tools. Visitors can explore the features and benefits of each solution, view
-                    case studies, and access customer testimonials. The website also includes resources such as blogs,
-                    whitepapers, and webinars to help businesses stay updated with the latest HR trends and best
-                    practices. With its intuitive design and comprehensive content, the HIT Solutions HCM website is an
-                    essential resource for organizations looking to optimize their HR processes and enhance employee
-                    engagement.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> ASP.Net webforms, HTML, CSS, JavaScript, VB, SQL Server DB, SSRS
-                    </li>
-                    <li><strong>Role:</strong> Software Developer / Software Development Supervisor</li>
-                    <li><strong>Duration:</strong> 30 months</li>
-                </ul>
-                <a href="https://www.hitshcm.com/logon.aspx" target="_blank">Live Project</a>
-                <!-- <a href="project-details/HITS.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/Home/coptic.png" alt="Learn Coptic Language" class="project-image">
-            <div class="project-details">
-                <h3>Learn Coptic Language Mobile App</h3>
-                <p>
-                    Learn Coptic Language Mobile App helps you learn the language by recognizing letters and their
-                    pronunciation, recognizing numbers, and learning some words and conversational sentences.
-                    The program also contains a dictionary for translation from Coptic to Arabic and vice versa.
-                </p>
-                <ul>
-                    <li><strong>Technologies:</strong> Xamarin Forms
-                    </li>
-                    <li><strong>Role:</strong> Personal Development</li>
-                    <li><strong>Duration:</strong> 2 months</li>
-                </ul>
-                <a href="https://play.google.com/store/apps/details?id=com.companyname.Coptic" target="_blank">Live
-                    Project</a>
-                <!-- <a href="project-details/Coptic.html" target="_blank">Project Details</a> -->
-            </div>
-        </div>
-    </section>
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <div class="container">
-            <div class="card">
-                <h3>Introduction to DevOps</h3>
-                <p>Great Learning Academy</p>
-                <p>June 2024</p>
-                <a href="images/Certificates/DevOps.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>React JS Tutorial</h3>
-                <p>Great Learning Academy</p>
-                <p>May 2024</p>
-                <a href="images/Certificates/ReactJS.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>Generative AI for Beginners</h3>
-                <p>Great Learning Academy</p>
-                <p>May 2024</p>
-                <a href="images/Certificates/GenerativeAI.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>Introduction to ASP.Net Core</h3>
-                <p>Great Learning Academy</p>
-                <p>May 2024</p>
-                <a href="images/Certificates/DotNetCore.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>Angular7 for Advanced Level</h3>
-                <p>Great Learning Academy</p>
-                <p>May 2024</p>
-                <a href="images/Certificates/AngularAdvanced.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>Angular7 for Intermediate Level</h3>
-                <p>Great Learning Academy</p>
-                <p>May 2024</p>
-                <a href="images/Certificates/AngularIntermediate.png" target="_blank">View Certificate</a>
-            </div>
-            <div class="card">
-                <h3>Angular7 for Beginners</h3>
-                    <p>Great Learning Academy</p>
-                    <p>May 2024</p>
-                    <a href="images/Certificates/AngularBeginners.png" target="_blank">View Certificate</a>
-            </div>
-        </div>
-    </section>
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="container">
-            <div class="card">
-                <h3>Bachelor’s Degree of Computer Science</h3>
-                <p>Faculty of Computers and Artificial Intelligence</p>
-                <p>Cairo University</p>
-                <p>September 2011 - June 2015 </p>
-                <p>Overall grade: Good</p>
-                <p>Graduation project grade: Excellent</p>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Form Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="mailto:mina.abdo2030@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p>Or find me on:</p>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/mina-abdo-7b239ab9/" target="_blank">
-                <img src="images/Home/linkedin.svg" alt="LinkedIn" class="social-icon">
-            </a>
-            <a href="https://github.com/DevMina/" target="_blank">
-                <img src="images/Home/GitHub.png" alt="GitHub" class="social-icon">
-            </a>
-        </div>
-    </section>
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Mina Abdo. All rights reserved.</p>
-    </footer>
 
-    <script src="js/script.js"></script>
+    <h1>Mina Abdo<span class="cursor"></span></h1>
+
+    <p class="hero-sub">
+      Software Engineering Specialist with 10 years of experience building
+      high-performance enterprise applications.
+    </p>
+
+    <div class="hero-tags">
+      <span class="hero-tag">.NET / C#</span>
+      <span class="hero-tag">Angular</span>
+      <span class="hero-tag">SQL Server</span>
+      <span class="hero-tag">Umbraco CMS</span>
+      <span class="hero-tag">SiteCore</span>
+      <span class="hero-tag">REST APIs</span>
+      <span class="hero-tag">React.js</span>
+      <span class="hero-tag">Xamarin</span>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        <i class="fa fa-briefcase"></i> View My Work
+      </a>
+      <a href="files/MinaAbdo-CV.pdf" download class="btn btn-outline-white">
+        <i class="fa fa-download"></i> Download CV
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">10</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Enterprise Clients</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50%</div>
+        <div class="stat-label">Data Entry Reduction</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">17+</div>
+        <div class="stat-label">Courses &amp; Certs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">About me</div>
+    <h2 class="reveal">Builder. Problem-solver. Mentor.</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="about-photo-row">
+          <img src="images/profile.jpg" alt="Mina Abdo" class="about-photo">
+          <div>
+            <p>
+              I'm a Software Engineering Specialist based in Cairo, Egypt, with 10 years of
+              backend-focused experience in enterprise environments. I specialise in
+              <strong>.NET (C#, ASP.Net MVC/Web Forms)</strong>, <strong>Angular</strong>, and
+              <strong>SQL Server</strong>, delivering high-performance applications for clients
+              including the Saudi Space Agency and First Abu Dhabi Bank.
+            </p>
+            <p>
+              Currently at <strong>Link Development</strong>, I lead feature development, mentor
+              junior engineers, manage debugging pipelines, and align technical delivery with
+              stakeholder requirements across large, cross-functional teams.
+            </p>
+            <p>
+              I thrive in dynamic environments, pick up new stacks quickly, and care deeply about
+              code quality and system performance. Open to relocation and available for
+              visa sponsorship.
+            </p>
+          </div>
+        </div>
+        <div class="about-actions">
+          <a href="files/MinaAbdo-CV.pdf" download class="btn btn-dark">
+            <i class="fa fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="badge-grid reveal">
+        <div class="badge-card">
+          <div class="badge-icon"><i class="fa fa-server"></i></div>
+          <div class="badge-title">Backend Engineering</div>
+          <div class="badge-desc">.NET Core, ASP.NET, C#, REST APIs, SQL Server</div>
+        </div>
+        <div class="badge-card">
+          <div class="badge-icon"><i class="fa fa-layer-group"></i></div>
+          <div class="badge-title">CMS Platforms</div>
+          <div class="badge-desc">Umbraco, SiteCore, SharePoint — full-stack delivery</div>
+        </div>
+        <div class="badge-card">
+          <div class="badge-icon"><i class="fa fa-desktop"></i></div>
+          <div class="badge-title">Frontend</div>
+          <div class="badge-desc">Angular, React, Vue.js, TypeScript, HTML/CSS</div>
+        </div>
+        <div class="badge-card">
+          <div class="badge-icon"><i class="fa fa-users"></i></div>
+          <div class="badge-title">Team Leadership</div>
+          <div class="badge-desc">Mentoring, code reviews, cross-team coordination</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label reveal">Expertise</div>
+    <h2 class="reveal">Skills &amp; Technologies</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-code"></i></div>
+          <div class="skill-card-title">Backend</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">C#</span>
+          <span class="pill">.NET Core</span>
+          <span class="pill">ASP.NET MVC</span>
+          <span class="pill">Web Forms</span>
+          <span class="pill">SignalR</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-paint-brush"></i></div>
+          <div class="skill-card-title">Frontend</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">Angular</span>
+          <span class="pill">React.js</span>
+          <span class="pill">Vue.js</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-database"></i></div>
+          <div class="skill-card-title">Data &amp; APIs</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">SQL Server</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">SSRS</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-cubes"></i></div>
+          <div class="skill-card-title">CMS &amp; Platforms</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">Umbraco</span>
+          <span class="pill">SiteCore</span>
+          <span class="pill">SharePoint</span>
+          <span class="pill">OutSystems</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-mobile-alt"></i></div>
+          <div class="skill-card-title">Mobile</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">Xamarin Forms</span>
+          <span class="pill">Cross-platform</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-sitemap"></i></div>
+          <div class="skill-card-title">Architecture &amp; Process</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">SOLID</span>
+          <span class="pill">MVVM</span>
+          <span class="pill">MVC</span>
+          <span class="pill">Clean Architecture</span>
+          <span class="pill">Domain-Driven Design</span>
+          <span class="pill">Agile</span>
+          <span class="pill">Waterfall</span>
+          <span class="pill">Git</span>
+          <span class="pill">GitHub Actions</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+          <div class="skill-card-title">Azure Cloud</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">Azure App Service</span>
+          <span class="pill">Azure Functions</span>
+          <span class="pill">Azure Blob Storage</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card-header">
+          <div class="skill-icon"><i class="fa fa-globe"></i></div>
+          <div class="skill-card-title">Business Domains</div>
+        </div>
+        <div class="pill-group">
+          <span class="pill">Government &amp; E-services</span>
+          <span class="pill">Banking &amp; Finance</span>
+          <span class="pill">Oil &amp; Gas</span>
+          <span class="pill">Aviation</span>
+          <span class="pill">Justice</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label reveal">Career</div>
+    <h2 class="reveal">Professional Experience</h2>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-date"><div class="tl-date-text">Jan 2024 – Present</div></div>
+        <div class="tl-line"></div>
+        <div class="tl-content">
+          <div class="job-title">Software Engineering Specialist</div>
+          <div class="job-co">Link Development</div>
+          <ul class="job-bullets">
+            <li>Mentored team members, delegated tasks, and led code reviews to ensure quality and best practices.</li>
+            <li>Led new feature development using SQL, Angular 8, MVC, and Umbraco across cross-functional teams.</li>
+            <li>Revamped the Saudi Space Agency (SSA) website, managing complex multi-department stakeholder requirements.</li>
+            <li>Developed systems for GACA and First Abu Dhabi Bank (FAB) with focus on performance, scalability, and security.</li>
+            <li>Aligned software requirements with customer needs to ensure projects met or exceeded expectations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date"><div class="tl-date-text">Jan 2021 – Jan 2024</div></div>
+        <div class="tl-line"></div>
+        <div class="tl-content">
+          <div class="job-title">Senior Software Engineer</div>
+          <div class="job-co">Link Development</div>
+          <ul class="job-bullets">
+            <li>Refactored codebase to enhance performance and responsiveness across multiple projects.</li>
+            <li>Designed and implemented new features using SQL, Angular 8, MVC, Umbraco, and SiteCore.</li>
+            <li>Led full redesign of Saudi Space Agency and Faisal Islamic Bank websites, improving UX and brand alignment.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date"><div class="tl-date-text">Feb 2019 – Jan 2021</div></div>
+        <div class="tl-line"></div>
+        <div class="tl-content">
+          <div class="job-title">Software Engineer</div>
+          <div class="job-co">Link Development</div>
+          <ul class="job-bullets">
+            <li>Developed features using SharePoint, SQL, AngularJS, MVC, and SignalR.</li>
+            <li>Implemented a streamlined admin panel that reduced data entry time by 50%.</li>
+            <li>Optimised lookup services in the GAFI system, improving performance by 25%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date"><div class="tl-date-text">Jan 2017 – Jan 2019</div></div>
+        <div class="tl-line"></div>
+        <div class="tl-content">
+          <div class="job-title">Software Development Supervisor</div>
+          <div class="job-co">HITS Solutions</div>
+          <ul class="job-bullets">
+            <li>Mentored and led a team of 5 junior engineers.</li>
+            <li>Oversaw development of HITS HR and Payroll systems using Xamarin Forms.</li>
+            <li>Independently developed new ASP.NET and SQL features.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-date"><div class="tl-date-text">Mar 2016 – Jan 2017</div></div>
+        <div class="tl-line"></div>
+        <div class="tl-content">
+          <div class="job-title">Junior Software Engineer</div>
+          <div class="job-co">HITS Solutions</div>
+          <ul class="job-bullets">
+            <li>Developed functionalities using ASP.NET and SQL.</li>
+            <li>Contributed to the development and rollout of the HITS HR and Payroll System.</li>
+            <li>Built cross-platform game applications using Xamarin Forms.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label reveal">Work</div>
+    <h2 class="reveal">Professional Projects</h2>
+    <p class="section-desc reveal">Enterprise-scale applications delivered across government, banking, and public-sector clients.</p>
+
+    <div class="projects-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img src="images/Home/ssa.png" alt="Saudi Space Agency website">
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Government · Web</div>
+          <div class="proj-name">Saudi Space Agency (SSA)</div>
+          <p class="proj-desc">National space agency portal showcasing Saudi Arabia's space exploration initiatives. Led revamp handling complex stakeholder requirements across multiple departments.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">Umbraco</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://ssa.gov.sa/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img src="images/Home/fib.png" alt="Faisal Islamic Bank">
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Banking · Web</div>
+          <div class="proj-name">Faisal Islamic Bank of Egypt (FIBE)</div>
+          <p class="proj-desc">Full redesign of an Islamic banking platform serving retail and business customers with Sharia-compliant products, e-banking, and multi-channel customer support.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">SiteCore</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://www.faisalbank.com.eg/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img src="images/Home/gafi.png" alt="GAFI">
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Government · Investment Portal</div>
+          <div class="proj-name">General Authority for Investment (GAFI)</div>
+          <p class="proj-desc">Investment facilitation platform for foreign investors and businesses. Implemented admin panel cutting data entry time by 50% and improved lookup performance by 25%.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">SharePoint</span>
+              <span class="tech-tag">AngularJS</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">SignalR</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://www.gafi.gov.eg/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img src="images/Home/hitsmobile.png" alt="HITS Mobile App">
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">HR &amp; Payroll · Mobile</div>
+          <div class="proj-name">HITS HR &amp; Payroll Mobile App</div>
+          <p class="proj-desc">Cross-platform mobile app enabling employees to view payslips, manage leave, track attendance, and receive real-time HR notifications — available on Google Play.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">Xamarin Forms</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://play.google.com/store/apps/details?id=com.hitssolutions.hitseasygo&hl=en" target="_blank" class="proj-link" title="Google Play"><i class="fab fa-google-play"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img src="images/Home/hits.png" alt="HITS HR System">
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">HR &amp; Payroll · Web Platform</div>
+          <div class="proj-name">HITS HR &amp; Payroll Management System</div>
+          <p class="proj-desc">End-to-end HCM platform covering payroll, talent acquisition, performance management, and employee self-service. Built with ASP.NET, VB, and SSRS reporting.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">ASP.NET</span>
+              <span class="tech-tag">VB</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">SSRS</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://www.hitshcm.com/logon.aspx" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PERSONAL / GITHUB PROJECTS ── -->
+<section id="personal">
+  <div class="section-inner">
+    <div class="section-label reveal">Personal</div>
+    <h2 class="reveal">Personal Projects</h2>
+    <p class="section-desc reveal">Side projects and open-source experiments — built to explore new stacks and solve real problems.</p>
+
+    <div class="github-grid">
+
+      <!-- ── DEV PROJECTS ── -->
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-graduation-cap" style="margin-right:6px; font-size:0.82rem;"></i>LearnDotNet</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/LearnDotNet/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/LearnDotNet" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A hands-on .NET learning project — exploring the latest features and patterns in modern .NET development. Updated actively.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+        </div>
+      </div>
+
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-child" style="margin-right:6px; font-size:0.82rem;"></i>LittleLearners</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/LittleLearners/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/LittleLearners" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">An educational platform for children — interactive learning experiences built with JavaScript to make early education fun and engaging.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item"><span class="lang-dot lang-js"></span> JavaScript</div>
+          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+        </div>
+      </div>
+
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-box" style="margin-right:6px; font-size:0.82rem;"></i>devbox</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/devbox/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/devbox" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A personal developer toolbox — a collection of reusable snippets, utilities, and starter templates for rapid project setup.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+        </div>
+      </div>
+
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-wallet" style="margin-right:6px; font-size:0.82rem;"></i>Runway</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/Runway/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/Runway" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A personal expense tracker — log and monitor your daily spending, categorise expenses, and keep your finances on track.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+        </div>
+      </div>
+
+      <!-- ── GAMES ── -->
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-brain" style="margin-right:6px; font-size:0.82rem;"></i>IQArcade</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/IQArcade/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/IQArcade" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A collection of IQ and brain-training arcade games built with JavaScript — puzzles, logic challenges, and cognitive skill exercises.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item"><span class="lang-dot lang-js"></span> JavaScript</div>
+          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+        </div>
+      </div>
+
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-heart" style="margin-right:6px; font-size:0.82rem;"></i>Matchling</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/Matchling/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/Matchling" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A card-matching memory game — classic pair-matching gameplay with a clean HTML/CSS interface and progressive difficulty.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+        </div>
+      </div>
+
+      <div class="gh-card reveal">
+        <div class="gh-top">
+          <div class="gh-name"><i class="fa fa-chess" style="margin-right:6px; font-size:0.82rem;"></i>endgame-chess</div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://devmina.github.io/endgame-chess/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            <a href="https://github.com/DevMina/endgame-chess" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="gh-desc">A JavaScript chess endgame puzzle game — practice chess endgame scenarios and sharpen your tactical thinking.</p>
+        <div class="gh-meta">
+          <div class="gh-meta-item"><span class="lang-dot lang-js"></span> JavaScript</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="https://github.com/DevMina" target="_blank" class="btn btn-dark">
+        <i class="fab fa-github"></i> View all on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATES ── -->
+<section id="certificates">
+  <div class="section-inner">
+    <div class="section-label reveal">Continuous Learning</div>
+    <h2 class="reveal">Learning &amp; Certifications</h2>
+    <p class="section-desc reveal">Actively investing in new skills across cloud, architecture, and modern frameworks.</p>
+
+    <!-- ── RECENT COURSES ── -->
+    <h3 class="reveal" style="font-family:var(--font-display); font-size:1.1rem; color:var(--text-dark); margin: 2.5rem 0 1.25rem; font-weight:600;">
+      <i class="fa fa-book-open" style="color:var(--blue); margin-right:8px;"></i> Recent Learning Activity
+    </h3>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-angular"></i></div>
+        <div class="cert-name">Angular — The Complete Guide (2025)</div>
+        <div class="cert-issuer">Udemy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Oct 2025 &nbsp;·&nbsp; 60 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-layer-group"></i></div>
+        <div class="cert-name">Clean Architecture</div>
+        <div class="cert-issuer">Self-Study (Robert C. Martin)</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Sep 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-shield-alt"></i></div>
+        <div class="cert-name">DevSecOps</div>
+        <div class="cert-issuer">Self-Study (AWS, RedHat)</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Sep 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-sitemap"></i></div>
+        <div class="cert-name">Introduction to Domain-Driven Design</div>
+        <div class="cert-issuer">Self-Study (Pluralsight)</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Sep 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-github"></i></div>
+        <div class="cert-name">GitHub Actions (Parts 1 &amp; 2)</div>
+        <div class="cert-issuer">Microsoft Learn</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Sep 2025 &nbsp;·&nbsp; 10 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-github"></i></div>
+        <div class="cert-name">GitHub Foundations (Parts 1 &amp; 2)</div>
+        <div class="cert-issuer">Microsoft Learn</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Aug 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <div class="cert-name">Introduction to Microsoft Azure</div>
+        <div class="cert-issuer">Microsoft Learn</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Aug 2025 &nbsp;·&nbsp; 15 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-rocket"></i></div>
+        <div class="cert-name">Build an Application</div>
+        <div class="cert-issuer">OutSystems</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Jul 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-mobile-alt"></i></div>
+        <div class="cert-name">Becoming a Mobile Developer</div>
+        <div class="cert-issuer">OutSystems</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Jun 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-desktop"></i></div>
+        <div class="cert-name">Becoming a Web Developer</div>
+        <div class="cert-issuer">OutSystems</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Mar 2025 &nbsp;·&nbsp; 20 hrs</div>
+      </div>
+
+    </div>
+
+    <!-- ── FORMAL CERTIFICATIONS ── -->
+    <h3 class="reveal" style="font-family:var(--font-display); font-size:1.1rem; color:var(--text-dark); margin: 3rem 0 1.25rem; font-weight:600;">
+      <i class="fa fa-certificate" style="color:var(--blue); margin-right:8px;"></i> Formal Certifications
+    </h3>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-angular"></i></div>
+        <div class="cert-name">Angular 7 — Advanced</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/AngularAdvanced.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-angular"></i></div>
+        <div class="cert-name">Angular 7 — Intermediate</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/AngularIntermediate.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-angular"></i></div>
+        <div class="cert-name">Angular 7 — Beginners</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/AngularBeginners.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fab fa-react"></i></div>
+        <div class="cert-name">React JS Tutorial</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/ReactJS.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-robot"></i></div>
+        <div class="cert-name">Generative AI for Beginners</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/GenerativeAI.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-code"></i></div>
+        <div class="cert-name">ASP.NET Core Introduction</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> May 2024</div>
+        <a href="images/Certificates/DotNetCore.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fa fa-infinity"></i></div>
+        <div class="cert-name">Introduction to DevOps</div>
+        <div class="cert-issuer">Great Learning Academy</div>
+        <div class="cert-date"><i class="fa fa-calendar-alt"></i> Jun 2024</div>
+        <a href="images/Certificates/DevOps.png" target="_blank" class="cert-link">
+          <i class="fa fa-external-link-alt"></i> View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-label reveal">Education</div>
+    <h2 class="reveal">Academic Background</h2>
+
+    <div class="edu-card reveal">
+      <div class="edu-icon"><i class="fa fa-graduation-cap"></i></div>
+      <div>
+        <div class="edu-degree">Bachelor's Degree — Computer Science</div>
+        <div class="edu-school">Faculty of Computers and Artificial Intelligence, Cairo University</div>
+        <div class="edu-years">September 2011 – June 2015</div>
+        <div class="edu-grades">
+          <span class="edu-badge">Overall: Good</span>
+          <span class="edu-badge">Graduation Project: Excellent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label reveal">Get in touch</div>
+    <h2 class="reveal">Let's work together</h2>
+    <p class="section-desc reveal">Open to new roles, freelance opportunities, or a good conversation about tech.</p>
+
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-items">
+          <div class="c-item">
+            <div class="c-icon"><i class="fa fa-envelope"></i></div>
+            <a href="mailto:mina.abdo2030@gmail.com">mina.abdo2030@gmail.com</a>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa fa-phone"></i></div>
+            <span>+20 128 032 5553</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa fa-map-marker-alt"></i></div>
+            <span>Cairo, Egypt — open to relocation</span>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fa fa-passport"></i></div>
+            <span>Available for visa sponsorship</span>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/mina-abdo-7b239ab9/" target="_blank" class="social-btn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/DevMina/" target="_blank" class="social-btn" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:mina.abdo2030@gmail.com" class="social-btn" aria-label="Email">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form reveal"
+            action="mailto:mina.abdo2030@gmail.com"
+            method="post" enctype="text/plain">
+        <div>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <span class="form-error" id="name-err"></span>
+        </div>
+        <div>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+          <span class="form-error" id="email-err"></span>
+        </div>
+        <div>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+          <span class="form-error" id="message-err"></span>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2024 Mina Abdo &nbsp;·&nbsp;
+    <a href="https://github.com/DevMina" target="_blank">GitHub</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/mina-abdo-7b239ab9/" target="_blank">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- ── SCROLL TO TOP ── -->
+<button id="top-btn" aria-label="Back to top">
+  <i class="fa fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
 </body>
-
 </html>
