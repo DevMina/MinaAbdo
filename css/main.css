@@ -177,6 +177,7 @@ h1 .cursor {
   margin-top: 4.5rem; padding-top: 2.5rem;
   border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap;
 }
+.stat { text-align: center; }
 .stat-num {
   font-family: var(--font-display); font-size: 2.2rem;
   font-weight: 700; color: #fff; line-height: 1;
@@ -185,6 +186,13 @@ h1 .cursor {
   font-size: 0.72rem; color: rgba(255,255,255,0.4);
   text-transform: uppercase; letter-spacing: 0.07em; margin-top: 5px;
 }
+.cursor {
+  display: inline-block; width: 3px; height: 0.8em;
+  background: var(--blue-light); margin-left: 5px;
+  vertical-align: -0.05em;
+  animation: blink 1.1s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
 /* ── ABOUT ── */
 #about { background: #fff; padding: 5.5rem 2rem; }
@@ -219,6 +227,9 @@ h1 .cursor {
 
 @media (max-width: 768px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo-row { flex-direction: column; align-items: center; text-align: center; }
+  .about-photo { width: 130px; height: 130px; }
+  .about-actions { justify-content: center; }
 }
 
 /* ── SKILLS ── */
@@ -306,12 +317,7 @@ h1 .cursor {
   display: block; transition: transform 0.4s ease;
 }
 .proj-card:hover .proj-img-wrap img { transform: scale(1.03); }
-.proj-placeholder {
-  width: 100%; height: 190px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.5rem; color: rgba(255,255,255,0.18);
-}
+
 .proj-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .proj-type {
   font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
@@ -354,7 +360,8 @@ h1 .cursor {
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .gh-card:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(59,125,216,0.08); }
-.gh-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.gh-card-top,
+.gh-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
 .gh-name { font-family: var(--font-display); font-weight: 600; font-size: 0.95rem; color: var(--blue); }
 .gh-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
 .gh-meta { display: flex; align-items: center; gap: 14px; margin-top: 2px; }
@@ -501,3 +508,119 @@ footer a:hover { text-decoration: underline; }
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── FOCUS / KEYBOARD NAVIGATION ── */
+:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
+.btn:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
+
+/* ── FORM LABELS ── */
+.form-label {
+  display: block; font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.5); margin-bottom: 5px; letter-spacing: 0.02em;
+}
+
+/* ── NAV ACTIVE STATE (replaces inline style) ── */
+.nav-links a.nav-active { color: #fff !important; }
+
+/* ── SECTION PADDING MOBILE ── */
+@media (max-width: 768px) {
+  #about, #skills, #experience, #projects,
+  #personal, #certificates, #education, #contact {
+    padding: 3.5rem 1.25rem;
+  }
+  .proj-hero { padding: 5.5rem 1.25rem 2.5rem; }
+  .proj-content { padding: 2.5rem 1.25rem; }
+}
+
+/* ── SKIP TO CONTENT ── */
+.skip-link {
+  position: fixed; top: -100%; left: 1rem; z-index: 9999;
+  background: var(--blue); color: #fff;
+  padding: 10px 18px; border-radius: 8px; font-size: 0.9rem;
+  font-weight: 600; text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ── CERTIFICATE SUB-HEADERS ── */
+.cert-section-title {
+  font-family: var(--font-display); font-size: 1.1rem;
+  color: var(--text-dark); margin: 2.5rem 0 1.25rem;
+  font-weight: 600; display: flex; align-items: center; gap: 8px;
+}
+.cert-section-title i { color: var(--blue); }
+
+/* ── GH CARD ICON ── */
+.gh-card-icon { margin-right: 6px; font-size: 0.82rem; }
+
+/* ── GH LINKS WRAPPER ── */
+.gh-links { display: flex; gap: 8px; }
+
+/* ── GH META HTML ── */
+.gh-meta-html { color: #e34c26; }
+
+/* ── GH META RECENT ── */
+.gh-meta-recent { color: #4ade80; font-size: 0.5rem; }
+
+/* ── PREFERS REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .reveal.visible { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  nav, #top-btn, .hero-actions, .about-actions,
+  .proj-links, .gh-links, .socials, .contact-form,
+  footer, .skip-link { display: none !important; }
+
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+
+  #home { min-height: auto; padding: 2rem 0; background: #fff !important; }
+  #home::before { display: none; }
+  h1, h2 { color: #000 !important; }
+  .hero-sub, .stat-label { color: #444 !important; }
+  .stat-num { color: #000 !important; font-size: 1.4rem; }
+  .hero-eyebrow { border: 1px solid #ccc !important; color: #000 !important; background: #f5f5f5 !important; }
+  .hero-tag { border: 1px solid #ccc !important; color: #333 !important; background: #f5f5f5 !important; }
+
+  section { padding: 1.5rem 0 !important; break-inside: avoid; }
+  .about-grid, .content-grid { grid-template-columns: 1fr 1fr; }
+  .badge-card, .skill-card, .cert-card, .gh-card, .proj-card,
+  .detail-card, .outcome-card, .edu-card { border: 1px solid #ddd !important; break-inside: avoid; }
+
+  #contact { background: #fff !important; }
+  #contact h2, #contact .section-label, #contact .section-desc,
+  .c-item { color: #000 !important; }
+
+  .pill { border: 1px solid #ccc !important; }
+  .section-label { color: #000 !important; }
+  .section-label::before { background: #000 !important; }
+  .tl-line::before { background: #ccc !important; }
+  .tl-line::after { background: #000 !important; box-shadow: none !important; }
+
+  a[href]::after { content: ' (' attr(href) ')'; font-size: 9pt; color: #666; }
+  a[href^="#"]::after, a[href^="javascript"]::after { content: ''; }
+}
+
+/* ── PERSONAL SECTION CTA ── */
+.personal-cta { margin-top: 2rem; }
+
+/* ── PROJECT IMAGE PLACEHOLDER ── */
+.proj-img-placeholder {
+  width: 100%; height: 190px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  display: none; align-items: center; justify-content: center;
+  font-size: 2.5rem; color: rgba(255,255,255,0.15);
+}

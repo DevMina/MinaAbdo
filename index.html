@@ -7,25 +7,35 @@
   <meta property="og:title" content="Mina Abdo — Software Engineering Specialist">
   <meta property="og:description" content="10 years building enterprise-scale applications for SSA, FAB, GACA, and more.">
   <meta property="og:type" content="website">
+  <!-- Update og:url and og:image to your actual domain when deploying -->
+  <meta property="og:url" content="https://devmina.github.io/">
+  <meta property="og:image" content="https://devmina.github.io/images/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://devmina.github.io/images/profile.jpg">
+  <link rel="canonical" href="https://devmina.github.io/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" href="images/favicon.ico">
   <title>Mina Abdo — Software Engineering Specialist</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap&font-display=swap" rel="stylesheet">
+  <!-- Icons - loaded async to reduce render blocking -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<a href="#home" class="skip-link">Skip to main content</a>
 
 <!-- ── NAV ── -->
 <nav>
   <a class="nav-logo" href="#home">Mina<span>.</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
     <i class="fa fa-bars"></i>
   </button>
   <ul class="nav-links" id="nav-links">
@@ -44,7 +54,7 @@
 <section id="home">
   <div class="hero-inner">
     <div class="hero-eyebrow">
-      <i class="fa fa-circle" style="font-size:0.5rem; color:#4ade80;"></i>
+      <i class="fa fa-circle gh-meta-recent"></i>
       Available for new opportunities · Open to relocation
     </div>
 
@@ -81,8 +91,8 @@
         <div class="stat-label">Years Experience</div>
       </div>
       <div class="stat">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">Enterprise Clients</div>
+        <div class="stat-num">9+</div>
+        <div class="stat-label">Enterprise Projects</div>
       </div>
       <div class="stat">
         <div class="stat-num">50%</div>
@@ -105,7 +115,7 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <div class="about-photo-row">
-          <img src="images/profile.jpg" alt="Mina Abdo" class="about-photo">
+          <img loading="eager" src="images/profile.jpg" alt="Mina Abdo" class="about-photo">
           <div>
             <p>
               I'm a Software Engineering Specialist based in Cairo, Egypt, with 10 years of
@@ -212,13 +222,13 @@
       <div class="skill-card reveal">
         <div class="skill-card-header">
           <div class="skill-icon"><i class="fa fa-cubes"></i></div>
-          <div class="skill-card-title">CMS &amp; Platforms</div>
+          <div class="skill-card-title">CMS &amp; Low-Code Platforms</div>
         </div>
         <div class="pill-group">
+          <span class="pill">OutSystems</span>
           <span class="pill">Umbraco</span>
           <span class="pill">SiteCore</span>
           <span class="pill">SharePoint</span>
-          <span class="pill">OutSystems</span>
         </div>
       </div>
 
@@ -375,7 +385,7 @@
 
       <div class="proj-card reveal">
         <div class="proj-img-wrap">
-          <img src="images/Home/ssa.png" alt="Saudi Space Agency website">
+          <img loading="lazy" src="images/Home/ssa.png" alt="Saudi Space Agency website">
         </div>
         <div class="proj-body">
           <div class="proj-type">Government · Web</div>
@@ -389,6 +399,7 @@
               <span class="tech-tag">SQL</span>
             </div>
             <div class="proj-links">
+              <a href="project-details/SSA.html" class="proj-link" title="View Details"><i class="fa fa-info-circle"></i></a>
               <a href="https://ssa.gov.sa/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             </div>
           </div>
@@ -397,7 +408,7 @@
 
       <div class="proj-card reveal">
         <div class="proj-img-wrap">
-          <img src="images/Home/fib.png" alt="Faisal Islamic Bank">
+          <img loading="lazy" src="images/Home/fib.png" alt="Faisal Islamic Bank">
         </div>
         <div class="proj-body">
           <div class="proj-type">Banking · Web</div>
@@ -411,6 +422,7 @@
               <span class="tech-tag">SQL</span>
             </div>
             <div class="proj-links">
+              <a href="project-details/FIBE.html" class="proj-link" title="View Details"><i class="fa fa-info-circle"></i></a>
               <a href="https://www.faisalbank.com.eg/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             </div>
           </div>
@@ -419,7 +431,7 @@
 
       <div class="proj-card reveal">
         <div class="proj-img-wrap">
-          <img src="images/Home/gafi.png" alt="GAFI">
+          <img loading="lazy" src="images/Home/gafi.png" alt="GAFI">
         </div>
         <div class="proj-body">
           <div class="proj-type">Government · Investment Portal</div>
@@ -433,6 +445,7 @@
               <span class="tech-tag">SignalR</span>
             </div>
             <div class="proj-links">
+              <a href="project-details/GAFI.html" class="proj-link" title="View Details"><i class="fa fa-info-circle"></i></a>
               <a href="https://www.gafi.gov.eg/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             </div>
           </div>
@@ -441,7 +454,7 @@
 
       <div class="proj-card reveal">
         <div class="proj-img-wrap">
-          <img src="images/Home/hitsmobile.png" alt="HITS Mobile App">
+          <img loading="lazy" src="images/Home/hitsmobile.png" alt="HITS Mobile App">
         </div>
         <div class="proj-body">
           <div class="proj-type">HR &amp; Payroll · Mobile</div>
@@ -452,6 +465,7 @@
               <span class="tech-tag">Xamarin Forms</span>
             </div>
             <div class="proj-links">
+              <a href="project-details/HitsMobile.html" class="proj-link" title="View Details"><i class="fa fa-info-circle"></i></a>
               <a href="https://play.google.com/store/apps/details?id=com.hitssolutions.hitseasygo&hl=en" target="_blank" class="proj-link" title="Google Play"><i class="fab fa-google-play"></i></a>
             </div>
           </div>
@@ -460,7 +474,7 @@
 
       <div class="proj-card reveal">
         <div class="proj-img-wrap">
-          <img src="images/Home/hits.png" alt="HITS HR System">
+          <img loading="lazy" src="images/Home/hits.png" alt="HITS HR System">
         </div>
         <div class="proj-body">
           <div class="proj-type">HR &amp; Payroll · Web Platform</div>
@@ -474,7 +488,101 @@
               <span class="tech-tag">SSRS</span>
             </div>
             <div class="proj-links">
+              <a href="project-details/HITS.html" class="proj-link" title="View Details"><i class="fa fa-info-circle"></i></a>
               <a href="https://www.hitshcm.com/logon.aspx" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img loading="lazy" src="images/Home/fab.png" alt="First Abu Dhabi Bank" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="proj-img-placeholder"><i class="fa fa-university" aria-hidden="true"></i></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Banking · Web Platform</div>
+          <div class="proj-name">First Abu Dhabi Bank (FAB)</div>
+          <p class="proj-desc">Internal banking portal for the UAE's largest bank — built with OutSystems, delivering digital banking services with a focus on performance, scalability, and enterprise security.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">OutSystems</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="project-details/FAB.html" class="proj-link" title="View Details"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              <a href="https://www.bankfab.com" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img loading="lazy" src="images/Home/gafirevamp.png" alt="GAFI Revamp" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="proj-img-placeholder"><i class="fa fa-chart-bar" aria-hidden="true"></i></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Government · Investment Portal</div>
+          <div class="proj-name">GAFI — Platform Revamp</div>
+          <p class="proj-desc">Full revamp of Egypt's General Authority for Investment portal using modern .NET — delivering improved performance, UX, and long-term maintainability over the legacy system.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+            <div class="proj-links">
+              <a href="project-details/GAFIRevamp.html" class="proj-link" title="View Details"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              <a href="https://www.gafi.gov.eg/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img loading="lazy" src="images/Home/maan.png" alt="Ma'an Abu Dhabi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="proj-img-placeholder"><i class="fa fa-hands-helping" aria-hidden="true"></i></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Government · Social Platform</div>
+          <div class="proj-name">Authority of Social Contribution — Ma'an</div>
+          <p class="proj-desc">Abu Dhabi's official social contribution platform — connecting government, private sector, and civil society to fund and manage social impact projects across health, education, and community development.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">OutSystems</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="project-details/Maan.html" class="proj-link" title="View Details"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              <a href="https://maan.gov.ae/en/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img-wrap">
+          <img loading="lazy" src="images/Home/taadeen.png" alt="Esnad Taadeen" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="proj-img-placeholder"><i class="fa fa-gem" aria-hidden="true"></i></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Government · Mining Platform</div>
+          <div class="proj-name">Esnad — Taadeen Mining Platform</div>
+          <p class="proj-desc">Saudi Arabia's national mining licensing platform — built for ESNAD under Vision 2030 to streamline mineral licence procedures, site discovery, and investor services for the Ministry of Industry and Mineral Resources.</p>
+          <div class="proj-footer">
+            <div class="tech-tags">
+              <span class="tech-tag">OutSystems</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+            <div class="proj-links">
+              <a href="project-details/Taadeen.html" class="proj-link" title="View Details"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+              <a href="https://taadeen.sa/en/" target="_blank" class="proj-link" title="Live site"><i class="fa fa-external-link-alt" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -496,23 +604,23 @@
       <!-- ── DEV PROJECTS ── -->
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-graduation-cap" style="margin-right:6px; font-size:0.82rem;"></i>LearnDotNet</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-graduation-cap" class="gh-card-icon"></i>LearnDotNet</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/LearnDotNet/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/LearnDotNet" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
         <p class="gh-desc">A hands-on .NET learning project — exploring the latest features and patterns in modern .NET development. Updated actively.</p>
         <div class="gh-meta">
-          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
-          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+          <div class="gh-meta-item gh-meta-html"><i class="fab fa-html5"></i> HTML</div>
+          <div class="gh-meta-item"><i class="fa fa-circle gh-meta-recent"></i> Recently updated</div>
         </div>
       </div>
 
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-child" style="margin-right:6px; font-size:0.82rem;"></i>LittleLearners</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-child" class="gh-card-icon"></i>LittleLearners</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/LittleLearners/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/LittleLearners" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
@@ -520,43 +628,43 @@
         <p class="gh-desc">An educational platform for children — interactive learning experiences built with JavaScript to make early education fun and engaging.</p>
         <div class="gh-meta">
           <div class="gh-meta-item"><span class="lang-dot lang-js"></span> JavaScript</div>
-          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+          <div class="gh-meta-item"><i class="fa fa-circle gh-meta-recent"></i> Recently updated</div>
         </div>
       </div>
 
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-box" style="margin-right:6px; font-size:0.82rem;"></i>devbox</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-box" class="gh-card-icon"></i>devbox</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/devbox/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/devbox" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
         <p class="gh-desc">A personal developer toolbox — a collection of reusable snippets, utilities, and starter templates for rapid project setup.</p>
         <div class="gh-meta">
-          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+          <div class="gh-meta-item gh-meta-html"><i class="fab fa-html5"></i> HTML</div>
         </div>
       </div>
 
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-wallet" style="margin-right:6px; font-size:0.82rem;"></i>Runway</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-wallet" class="gh-card-icon"></i>Runway</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/Runway/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/Runway" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
         <p class="gh-desc">A personal expense tracker — log and monitor your daily spending, categorise expenses, and keep your finances on track.</p>
         <div class="gh-meta">
-          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+          <div class="gh-meta-item gh-meta-html"><i class="fab fa-html5"></i> HTML</div>
         </div>
       </div>
 
       <!-- ── GAMES ── -->
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-brain" style="margin-right:6px; font-size:0.82rem;"></i>IQArcade</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-brain" class="gh-card-icon"></i>IQArcade</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/IQArcade/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/IQArcade" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
@@ -564,28 +672,28 @@
         <p class="gh-desc">A collection of IQ and brain-training arcade games built with JavaScript — puzzles, logic challenges, and cognitive skill exercises.</p>
         <div class="gh-meta">
           <div class="gh-meta-item"><span class="lang-dot lang-js"></span> JavaScript</div>
-          <div class="gh-meta-item"><i class="fa fa-circle" style="color:#4ade80; font-size:0.5rem;"></i> Recently updated</div>
+          <div class="gh-meta-item"><i class="fa fa-circle gh-meta-recent"></i> Recently updated</div>
         </div>
       </div>
 
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-heart" style="margin-right:6px; font-size:0.82rem;"></i>Matchling</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-heart" class="gh-card-icon"></i>Matchling</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/Matchling/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/Matchling" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
         </div>
         <p class="gh-desc">A card-matching memory game — classic pair-matching gameplay with a clean HTML/CSS interface and progressive difficulty.</p>
         <div class="gh-meta">
-          <div class="gh-meta-item" style="color:#e34c26;"><i class="fab fa-html5"></i> HTML</div>
+          <div class="gh-meta-item gh-meta-html"><i class="fab fa-html5"></i> HTML</div>
         </div>
       </div>
 
       <div class="gh-card reveal">
         <div class="gh-top">
-          <div class="gh-name"><i class="fa fa-chess" style="margin-right:6px; font-size:0.82rem;"></i>endgame-chess</div>
-          <div style="display:flex; gap:8px;">
+          <div class="gh-name"><i class="fa fa-chess" class="gh-card-icon"></i>endgame-chess</div>
+          <div class="gh-links">
             <a href="https://devmina.github.io/endgame-chess/" target="_blank" class="gh-ext-link" title="Live site"><i class="fa fa-external-link-alt"></i></a>
             <a href="https://github.com/DevMina/endgame-chess" target="_blank" class="gh-ext-link" title="GitHub"><i class="fab fa-github"></i></a>
           </div>
@@ -598,7 +706,7 @@
 
     </div>
 
-    <div style="margin-top: 2rem;">
+    <div class="personal-cta">
       <a href="https://github.com/DevMina" target="_blank" class="btn btn-dark">
         <i class="fab fa-github"></i> View all on GitHub
       </a>
@@ -614,8 +722,8 @@
     <p class="section-desc reveal">Actively investing in new skills across cloud, architecture, and modern frameworks.</p>
 
     <!-- ── RECENT COURSES ── -->
-    <h3 class="reveal" style="font-family:var(--font-display); font-size:1.1rem; color:var(--text-dark); margin: 2.5rem 0 1.25rem; font-weight:600;">
-      <i class="fa fa-book-open" style="color:var(--blue); margin-right:8px;"></i> Recent Learning Activity
+    <h3 class="reveal cert-section-title">
+      <i class="fa fa-book-open" aria-hidden="true"></i> Recent Learning Activity
     </h3>
     <div class="certs-grid">
 
@@ -692,8 +800,8 @@
     </div>
 
     <!-- ── FORMAL CERTIFICATIONS ── -->
-    <h3 class="reveal" style="font-family:var(--font-display); font-size:1.1rem; color:var(--text-dark); margin: 3rem 0 1.25rem; font-weight:600;">
-      <i class="fa fa-certificate" style="color:var(--blue); margin-right:8px;"></i> Formal Certifications
+    <h3 class="reveal cert-section-title">
+      <i class="fa fa-certificate" aria-hidden="true"></i> Formal Certifications
     </h3>
     <div class="certs-grid">
 
@@ -833,23 +941,30 @@
       </div>
 
       <form id="contact-form" class="contact-form reveal"
-            action="mailto:mina.abdo2030@gmail.com"
-            method="post" enctype="text/plain">
+            action="https://formsubmit.co/mina.abdo2030@gmail.com"
+            method="POST">
+        <input type="hidden" name="_subject" value="New message from portfolio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://devmina.github.io/thank-you.html">
         <div>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-          <span class="form-error" id="name-err"></span>
+          <label for="name" class="form-label">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true" aria-describedby="name-err">
+          <span class="form-error" id="name-err" role="alert"></span>
         </div>
         <div>
-          <input type="email" id="email" name="email" placeholder="Your email" required>
-          <span class="form-error" id="email-err"></span>
+          <label for="email" class="form-label">Your email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required aria-required="true" aria-describedby="email-err">
+          <span class="form-error" id="email-err" role="alert"></span>
         </div>
         <div>
-          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
-          <span class="form-error" id="message-err"></span>
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required aria-required="true" aria-describedby="message-err"></textarea>
+          <span class="form-error" id="message-err" role="alert"></span>
         </div>
         <div>
-          <button type="submit" class="btn btn-primary">
-            <i class="fa fa-paper-plane"></i> Send Message
+          <button type="submit" class="btn btn-primary" aria-label="Send message">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
           </button>
         </div>
       </form>
@@ -859,7 +974,7 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <p>© 2024 Mina Abdo &nbsp;·&nbsp;
+  <p>© <span id="footer-year"></span> Mina Abdo &nbsp;·&nbsp;
     <a href="https://github.com/DevMina" target="_blank">GitHub</a> &nbsp;·&nbsp;
     <a href="https://www.linkedin.com/in/mina-abdo-7b239ab9/" target="_blank">LinkedIn</a>
   </p>

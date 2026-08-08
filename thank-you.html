@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent · Mina Abdo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2A; --blue: #3B7DD8; --blue-light: #5B9BF8;
+      --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+    }
+    body {
+      font-family: var(--font-body); background: var(--navy);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 2rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 3rem 2.5rem; max-width: 480px; width: 100%;
+    }
+    .icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: rgba(59,125,216,0.15); border: 1px solid rgba(59,125,216,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem; font-size: 1.8rem; color: var(--blue-light);
+    }
+    h1 {
+      font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+      color: #fff; margin-bottom: 0.75rem; letter-spacing: -0.02em;
+    }
+    p { font-size: 0.95rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 2rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue); color: #fff; padding: 11px 24px;
+      border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--blue-light); }
+    .countdown { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 1.25rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon"><i class="fa fa-check"></i></div>
+    <h1>Message sent!</h1>
+    <p>Thanks for reaching out. I'll get back to you as soon as possible — usually within 1–2 business days.</p>
+    <a href="index.html" class="btn"><i class="fa fa-arrow-left"></i> Back to Portfolio</a>
+    <div class="countdown">Redirecting in <span id="count">5</span>s…</div>
+  </div>
+  <script>
+    let n = 5;
+    const el = document.getElementById('count');
+    const t = setInterval(() => {
+      n--;
+      el.textContent = n;
+      if (n <= 0) { clearInterval(t); window.location.href = 'index.html'; }
+    }, 1000);
+  </script>
+</body>
+</html>

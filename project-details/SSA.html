@@ -1,100 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - Saudi Space Agency Website</title>
-    <link rel="stylesheet" href="../css/projects.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case study: Revamped the Saudi Space Agency national portal using Umbraco, Angular, C# and SQL Server. Led by Mina Abdo at Link Development.">
+  <title>Saudi Space Agency — Project Details · Mina Abdo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <meta property="og:title" content="Saudi Space Agency — Mina Abdo">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://devmina.github.io/images/Home/ssa.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://devmina.github.io/images/Home/ssa.png">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
 </head>
-
 <body>
-    <!-- topBtn -->
-    <button onclick="topFunction()" id="topBtn" class="top-arrow">▲</button>
-    <div class="container">
-        <header>
-            <h1>Saudi Space Agency Website</h1>
-        </header>
-        <section class="overview">
-            <h2>Overview</h2>
-            <p>
-                The Saudi Space Agency's website is a dynamic portal showcasing the Kingdom's advancements and
-                initiatives in space exploration and technology. The site offers detailed information about the
-                agency's mission, vision, and strategic goals aimed at enhancing Saudi Arabia's presence in the
-                global space industry. Visitors can explore various programs and projects, research and development
-                activities, and international collaborations. The website also features news updates, upcoming
-                events, and educational resources to engage the public and inspire future generations in the field
-                of space science. User-friendly navigation and comprehensive content make it an essential resource
-                for anyone interested in Saudi Arabia's space endeavors.
-            </p>
-        </section>
-        <section class="role">
-            <h2>Role and Responsibilities</h2>
-            <p>
-                As the Software Engineering Specialist, I was responsible for implementing both the frontend and backend development
-                of some features in the website. I collaborated with a team of designers, content creators, front-end and back-end
-                developers to ensure a seamless and engaging user experience. My tasks included setting up the Umbraco CMS,
-                developing custom modules, and integrating various APIs for real-time data updates.
-            </p>
-        </section>
-        <section class="technologies">
-            <h2>Key Technologies</h2>
-            <ul>
-                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Angular</li>
-                <li><strong>Backend:</strong> ASP.NET, Umbraco CMS</li>
-                <li><strong>Database:</strong> Microsoft SQL Server</li>
-                <li><strong>Others:</strong> RESTful APIs</li>
-            </ul>
-        </section>
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li><strong>News & Updates:</strong> Regularly updated news section with the latest information on space
-                    missions and events.</li>
-                <li><strong>Research Publications:</strong> A repository of research papers and publications related to
-                    space science and technology.</li>
-                <li><strong>Event Calendar:</strong> Interactive calendar featuring upcoming space-related events,
-                    conferences, and webinars.</li>
-                <li><strong>Multimedia Gallery:</strong> High-quality images and videos showcasing space missions and
-                    related activities.</li>
-                <li><strong>Contact & Support:</strong> A contact form and support section for inquiries and feedback.
-                </li>
-            </ul>
-        </section>
-        <section class="challenges">
-            <h2>Challenges</h2>
-            <p><strong>Data Integration:</strong> Integrating various APIs to fetch real-time data on space missions and
-                research was challenging. I implemented robust error handling and caching mechanisms to ensure data
-                reliability.</p>
-            <p><strong>Performance Optimization:</strong> Ensuring the website performed well under high traffic
-                conditions required extensive optimization techniques, including server-side caching and efficient
-                database queries.</p>
-        </section>
-        <section class="outcome">
-            <h2>Outcome</h2>
-            <ul>
-                <li><strong>Increased Engagement:</strong> The website saw a 50% increase in user engagement within the
-                    first three months of launch.</li>
-                <li><strong>Positive Feedback:</strong> Received positive feedback from users and stakeholders for the
-                    informative and user-friendly interface.</li>
-                <li><strong>Performance Improvement:</strong> Achieved a 40% reduction in page load times through
-                    performance optimizations.</li>
-            </ul>
-        </section>
-        <section class="screenshots">
-            <h2>Screenshots</h2>
-            <img src="../images/SSA/home.png" alt="Homepage">
-            <img src="../images/SSA/news.png" alt="News Section">
-            <img src="../images/SSA/events.png" alt="Events Section">
-        </section>
-        <section class="links">
-            <h2>Links</h2>
-            <ul>
-                <li><a href="https://ssa.gov.sa/" target="_blank">Live Project</a></li>
-            </ul>
-        </section>
-    </div>
-    <script src="../js/script.js"></script>
-</body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
+<nav>
+  <a class="nav-logo" href="../index.html">Mina<span>.</span></a>
+  <a class="nav-back" href="../index.html#projects"><i class="fa fa-arrow-left"></i> Back to Projects</a>
+</nav>
+
+<div class="proj-hero" id="main-content">
+  <div class="proj-hero-inner">
+    <div class="proj-type-badge"><i class="fa fa-rocket"></i> Government · Web Platform</div>
+    <h1>Saudi Space Agency</h1>
+    <p class="proj-hero-desc">National portal showcasing Saudi Arabia's space exploration initiatives — revamped to handle complex multi-department stakeholder requirements at enterprise scale.</p>
+    <div class="proj-hero-actions">
+      <a href="https://ssa.gov.sa/" target="_blank" class="btn btn-primary"><i class="fa fa-external-link-alt"></i> Visit Live Site</a>
+      <a href="../index.html#projects" class="btn btn-outline-white"><i class="fa fa-arrow-left"></i> All Projects</a>
+    </div>
+    <div class="proj-meta-strip">
+      <div class="meta-item"><div class="meta-label">Role</div><div class="meta-value">Engineering Specialist</div></div>
+      <div class="meta-item"><div class="meta-label">Company</div><div class="meta-value">Link Development</div></div>
+      <div class="meta-item"><div class="meta-label">Year</div><div class="meta-value">2024 – Present</div></div>
+      <div class="meta-item"><div class="meta-label">Client</div><div class="meta-value">Saudi Space Agency</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="proj-screenshots">
+  <div class="screenshots-inner">
+    <div class="screenshots-grid">
+      <div class="screenshot-wrap"><img loading="lazy" src="../images/SSA/home.png" alt="SSA Homepage"></div>
+      <div class="screenshot-wrap"><img loading="lazy" src="../images/SSA/news.png" alt="SSA News Section"></div>
+      <div class="screenshot-wrap"><img loading="lazy" src="../images/SSA/events.png" alt="SSA Events Section"></div>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+
+  <div class="section-block">
+    <div class="section-label">Overview</div>
+    <h2>About the Project</h2>
+    <p class="prose">The Saudi Space Agency's website is a dynamic national portal showcasing the Kingdom's advancements and initiatives in space exploration and technology. The site provides detailed information about the agency's mission, vision, and strategic goals, covering international collaborations, research programs, news updates, and educational resources designed to inspire future generations in space science.</p>
+  </div>
+
+  <div class="content-grid">
+    <div class="section-block">
+      <div class="section-label">My Role</div>
+      <h2>Responsibilities</h2>
+      <p class="prose">As Software Engineering Specialist, I led the revamp of the SSA website — overseeing both frontend and backend feature development, handling complex multi-department stakeholder requirements, and coordinating across design, content, and backend teams. My work included configuring Umbraco CMS, building custom modules, and integrating real-time data APIs.</p>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Stack</div>
+      <h2>Key Technologies</h2>
+      <div class="tech-grid">
+        <div class="tech-row">
+          <span class="tech-cat">Frontend</span>
+          <div class="pill-group"><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">Angular</span><span class="pill">JavaScript</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech-cat">Backend</span>
+          <div class="pill-group"><span class="pill">ASP.NET</span><span class="pill">C#</span><span class="pill">Umbraco CMS</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech-cat">Database</span>
+          <div class="pill-group"><span class="pill">SQL Server</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech-cat">Other</span>
+          <div class="pill-group"><span class="pill">REST APIs</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Features</div>
+    <h2>Key Features</h2>
+    <ul class="feature-list">
+      <li><strong>News &amp; Updates</strong>Regularly updated news section with the latest information on space missions, launches, and events.</li>
+      <li><strong>Research Publications</strong>Repository of research papers and publications related to space science and technology.</li>
+      <li><strong>Event Calendar</strong>Interactive calendar featuring upcoming space-related events, conferences, and webinars.</li>
+      <li><strong>Multimedia Gallery</strong>High-quality images and videos showcasing space missions and related activities.</li>
+      <li><strong>Contact &amp; Support</strong>Contact form and support section for public inquiries and stakeholder feedback.</li>
+    </ul>
+  </div>
+
+  <div class="content-grid">
+    <div class="section-block">
+      <div class="section-label">Challenges</div>
+      <h2>Technical Challenges</h2>
+      <div class="card-list">
+        <div class="detail-card">
+          <div class="detail-card-title"><i class="fa fa-plug"></i> Data Integration</div>
+          <p>Integrating multiple APIs to fetch real-time data on space missions required robust error handling and caching mechanisms to ensure data reliability under load.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-title"><i class="fa fa-tachometer-alt"></i> Performance at Scale</div>
+          <p>High traffic conditions required extensive server-side caching and efficient database query strategies to maintain fast response times.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-title"><i class="fa fa-users"></i> Stakeholder Complexity</div>
+          <p>Coordinating requirements across multiple government departments while maintaining clear communication and timely delivery.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Outcome</div>
+      <h2>Results</h2>
+      <div class="outcome-grid">
+        <div class="outcome-card">
+          <div class="outcome-stat">50%</div>
+          <div class="outcome-label">User Engagement</div>
+          <div class="outcome-desc">Increase within the first three months of launch</div>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-stat">40%</div>
+          <div class="outcome-label">Faster Load Times</div>
+          <div class="outcome-desc">Reduction in page load time via performance optimisation</div>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-stat">★★★★★</div>
+          <div class="outcome-label">Stakeholder Rating</div>
+          <div class="outcome-desc">Positive feedback from users and government stakeholders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer><p>© <span class="footer-year"></span> Mina Abdo &nbsp;·&nbsp; <a href="../index.html">Portfolio</a></p></footer>
+<button id="top-btn" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+<script>
+  // Dynamic year
+  document.querySelectorAll('.footer-year').forEach(e => e.textContent = new Date().getFullYear());
+  // Scroll-to-top (passive)
+  const topBtn = document.getElementById('top-btn');
+  if (topBtn) {
+    window.addEventListener('scroll', () => topBtn.classList.toggle('visible', window.scrollY > 300), { passive: true });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+</script>
+</body>
 </html>

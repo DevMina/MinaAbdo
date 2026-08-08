@@ -1,26 +1,71 @@
-/* ── NAV TOGGLE ── */
+/* ── DYNAMIC COPYRIGHT YEAR ── */
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ── NAV TOGGLE (with Escape key support) ── */
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => navLinks.classList.remove('open'))
-);
-
-/* ── SCROLL-TO-TOP BUTTON ── */
-const topBtn = document.getElementById('top-btn');
-window.addEventListener('scroll', () => {
-  topBtn.classList.toggle('visible', window.scrollY > 320);
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
 });
-topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* ── SCROLL REVEAL ── */
-const revealEls = document.querySelectorAll('.reveal');
-const observer  = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-  { threshold: 0.12 }
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  })
 );
-revealEls.forEach(el => observer.observe(el));
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.focus();
+  }
+});
+
+/* ── SCROLL-TO-TOP BUTTON (passive) ── */
+const topBtn = document.getElementById('top-btn');
+if (topBtn) {
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('visible', window.scrollY > 320);
+  }, { passive: true });
+  topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+/* ── SCROLL REVEAL (with IntersectionObserver fallback) ── */
+const revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  revealEls.forEach(el => observer.observe(el));
+} else {
+  /* Fallback: show everything immediately */
+  revealEls.forEach(el => el.classList.add('visible'));
+}
+
+/* ── ACTIVE NAV HIGHLIGHT (uses CSS class, not inline style) ── */
+const sections   = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navAnchors.forEach(a => {
+    a.classList.toggle('nav-active', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
 
 /* ── CONTACT FORM VALIDATION ── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,10 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameInput    = form.querySelector('[name="name"]');
   const emailInput   = form.querySelector('[name="email"]');
   const messageInput = form.querySelector('[name="message"]');
-
-  const nameErr    = document.getElementById('name-err');
-  const emailErr   = document.getElementById('email-err');
-  const messageErr = document.getElementById('message-err');
+  const nameErr      = document.getElementById('name-err');
+  const emailErr     = document.getElementById('email-err');
+  const messageErr   = document.getElementById('message-err');
 
   function showError(el, msg) { el.textContent = msg; el.style.display = 'block'; }
   function clearError(el)     { el.textContent = '';  el.style.display = 'none';  }
@@ -57,24 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!valid) e.preventDefault();
   });
 
-  /* Inline clear on input */
   nameInput.addEventListener('input',    () => clearError(nameErr));
   emailInput.addEventListener('input',   () => clearError(emailErr));
   messageInput.addEventListener('input', () => clearError(messageErr));
 });
-
-/* ── ACTIVE NAV HIGHLIGHT ── */
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 80) current = s.id;
-  });
-  navAnchors.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current
-      ? '#fff'
-      : '';
-  });
-}, { passive: true });

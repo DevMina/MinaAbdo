@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found · Mina Abdo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0D1B2A; --blue: #3B7DD8; --blue-light: #5B9BF8;
+      --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+    }
+    body {
+      font-family: var(--font-body); background: var(--navy);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 2rem; position: relative; overflow: hidden;
+    }
+    body::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 60%, rgba(59,125,216,0.1) 0%, transparent 70%);
+    }
+    .content { position: relative; z-index: 1; max-width: 500px; }
+    .code {
+      font-family: var(--font-display); font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 700; color: transparent;
+      background: linear-gradient(135deg, #3B7DD8, #5B9BF8);
+      -webkit-background-clip: text; background-clip: text;
+      line-height: 1; letter-spacing: -0.04em; margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: var(--font-display); font-size: 1.5rem; font-weight: 600;
+      color: #fff; margin-bottom: 0.75rem;
+    }
+    p { font-size: 0.95rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 2rem; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px; border-radius: 8px; font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { background: var(--blue-light); }
+    .btn-outline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); }
+    .btn-outline:hover { background: rgba(255,255,255,0.07); }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="code">404</div>
+    <h1>Page not found</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <div class="actions">
+      <a href="index.html" class="btn btn-primary"><i class="fa fa-home"></i> Go Home</a>
+      <a href="index.html#contact" class="btn btn-outline"><i class="fa fa-envelope"></i> Contact Me</a>
+    </div>
+  </div>
+</body>
+</html>
