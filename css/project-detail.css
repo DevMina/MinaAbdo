@@ -252,3 +252,28 @@ footer a { color: var(--blue-light); text-decoration: none; }
   footer a { color: #000 !important; }
   a[href^="http"]::after { content: ' (' attr(href) ')'; font-size: 9pt; color: #666; }
 }
+
+/* ── NO SCREENSHOTS MESSAGE ── */
+.no-screenshots-msg {
+  text-align: center; padding: 2rem 0;
+  color: rgba(255,255,255,0.25); font-size: 0.85rem;
+}
+.no-screenshots-msg i {
+  font-size: 2rem; display: block; margin-bottom: 0.75rem;
+}
+.no-screenshots-msg a {
+  color: rgba(91,155,248,0.7); text-decoration: none;
+}
+.no-screenshots-msg a:hover { color: var(--blue-light); }
+
+/* ── CROSS-LINK ANCHOR ── */
+.cross-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 8px; font-size: 0.85rem;
+  color: var(--blue); text-decoration: none;
+  transition: gap 0.2s;
+}
+.cross-link:hover { gap: 10px; }
+
+/* ── CSS VARIABLE: navy-light (shared with main.css) ── */
+:root { --navy-light: #1E3050; }

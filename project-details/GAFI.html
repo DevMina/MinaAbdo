@@ -32,7 +32,7 @@
     <h1>General Authority for Investment (GAFI)</h1>
     <p class="proj-hero-desc">Egypt's official investment facilitation platform — streamlining business registration, permits, and investment services for foreign and domestic investors.</p>
     <div class="proj-hero-actions">
-      <a href="https://www.gafi.gov.eg/" target="_blank" class="btn btn-primary"><i class="fa fa-external-link-alt"></i> Visit Live Site</a>
+      <a href="https://www.gafi.gov.eg/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa fa-external-link-alt"></i> Visit Live Site</a>
       <a href="../index.html#projects" class="btn btn-outline-white"><i class="fa fa-arrow-left"></i> All Projects</a>
     </div>
     <div class="proj-meta-strip">
@@ -46,9 +46,9 @@
 
 <div class="proj-screenshots">
   <div class="screenshots-inner">
-    <div style="text-align:center; padding: 2rem 0; color:rgba(255,255,255,0.25); font-size:0.85rem;">
-      <i class="fa fa-image" style="font-size:2rem; display:block; margin-bottom:0.75rem;"></i>
-      Screenshots not available — visit the <a href="https://www.gafi.gov.eg/" target="_blank" style="color:rgba(91,155,248,0.7); text-decoration:none;">live site</a> to see the platform.
+    <div class="no-screenshots-msg">
+      <i class="fa fa-image" aria-hidden="true"></i>
+      Screenshots not available — visit the <a href="https://www.gafi.gov.eg/" target="_blank" rel="noopener noreferrer" >live site</a> to see the platform.
     </div>
   </div>
 </div>
@@ -151,14 +151,24 @@
     </div>
   </div>
 
+  <div class="section-block">
+    <div class="section-label">Related</div>
+    <h2>See Also</h2>
+    <div class="card-list">
+      <div class="detail-card">
+        <div class="detail-card-title"><i class="fa fa-sync-alt"></i> GAFI Platform Revamp (2024)</div>
+        <p>Following the original build, the GAFI platform was fully revamped in 2024 — migrating from legacy Web Forms to modern .NET Core and Angular for improved performance and maintainability.</p>
+        <a href="GAFIRevamp.html" class="cross-link">View GAFI Revamp <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <footer><p>© <span class="footer-year"></span> Mina Abdo &nbsp;·&nbsp; <a href="../index.html">Portfolio</a></p></footer>
 <button id="top-btn" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
 <script>
-  // Dynamic year
   document.querySelectorAll('.footer-year').forEach(e => e.textContent = new Date().getFullYear());
-  // Scroll-to-top (passive)
   const topBtn = document.getElementById('top-btn');
   if (topBtn) {
     window.addEventListener('scroll', () => topBtn.classList.toggle('visible', window.scrollY > 300), { passive: true });

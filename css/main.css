@@ -515,8 +515,6 @@ footer a:hover { text-decoration: underline; }
   outline-offset: 3px;
   border-radius: 4px;
 }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
-.btn:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; }
 
 /* ── FORM LABELS ── */
 .form-label {
