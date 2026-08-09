@@ -33,9 +33,9 @@
 <a href="#home" class="skip-link">Skip to main content</a>
 
 <!-- ── NAV ── -->
-<nav>
+<nav aria-label="Main navigation">
   <a class="nav-logo" href="#home">Mina<span>.</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+  <button type="button" class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
     <i class="fa fa-bars"></i>
   </button>
   <ul class="nav-links" id="nav-links">
@@ -977,6 +977,7 @@
             action="https://formsubmit.co/mina.abdo2030@gmail.com"
             method="POST">
         <input type="hidden" name="_subject" value="New message from portfolio">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://devmina.github.io/thank-you.html">
@@ -996,8 +997,8 @@
           <span class="form-error" id="message-err" role="alert"></span>
         </div>
         <div>
-          <button type="submit" class="btn btn-primary" aria-label="Send message">
-            <i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
+          <button type="submit" class="btn btn-primary" id="submit-btn" aria-label="Send message">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i> <span id="btn-text">Send Message</span>
           </button>
         </div>
       </form>
@@ -1014,7 +1015,7 @@
 </footer>
 
 <!-- ── SCROLL TO TOP ── -->
-<button id="top-btn" aria-label="Back to top">
+<button type="button" id="top-btn" aria-label="Back to top">
   <i class="fa fa-arrow-up"></i>
 </button>
 

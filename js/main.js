@@ -105,3 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
   emailInput.addEventListener('input',   () => clearError(emailErr));
   messageInput.addEventListener('input', () => clearError(messageErr));
 });
+
+/* ── FORM SUBMIT LOADING STATE ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText   = document.getElementById('btn-text');
+  const form      = document.getElementById('contact-form');
+  if (!submitBtn || !form) return;
+
+  form.addEventListener('submit', () => {
+    // Only show loading if form is valid (no errors showing)
+    const hasErrors = document.querySelectorAll('.form-error[style*="block"]').length > 0;
+    if (!hasErrors) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
+      btnText.textContent = 'Sending…';
+    }
+  });
+});

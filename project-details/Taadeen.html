@@ -21,7 +21,7 @@
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
 
-<nav>
+<nav aria-label="Main navigation">
   <a class="nav-logo" href="../index.html">Mina<span>.</span></a>
   <a class="nav-back" href="../index.html#projects"><i class="fa fa-arrow-left"></i> Back to Projects</a>
 </nav>
@@ -148,7 +148,7 @@
 </div>
 
 <footer><p>© <span class="footer-year"></span> Mina Abdo &nbsp;·&nbsp; <a href="../index.html">Portfolio</a></p></footer>
-<button id="top-btn" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+<button type="button" id="top-btn" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
 <script>
   document.querySelectorAll('.footer-year').forEach(e => e.textContent = new Date().getFullYear());
   const topBtn = document.getElementById('top-btn');
